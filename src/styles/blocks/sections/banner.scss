@@ -1,0 +1,234 @@
+.banner-section{
+    &__container{
+        background-color: #F5F6F6;
+        @include df_jcc;
+        position: relative;
+        @include mobile{
+            @include df_fdc;
+        }
+        .doctor-block-mobile{
+            display: none;
+            @include mobile{
+                display: block;
+                &__img{
+                    width: 100%;
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                }
+            }
+            
+            
+        }
+        &__info-block{
+            padding-top: 3.5rem;
+            @include df_fdc_ac;
+            gap: 2.75rem;
+            padding-bottom: 1.125rem;
+            @include mobile{
+                padding: 0 1.667rem;
+                position: relative;
+                padding-bottom: 4.75rem;
+                margin-top: -4rem;
+            }
+            &__main{
+                @include df_fdc_ac;
+                gap: 2rem;
+                max-width: 60.313rem;
+                width: 100%;
+                .title-block{
+                    @include df_fdc_ac;
+                    gap: 1.5rem;
+                    &__main{
+                        @include heading_1;
+                        color: #222222;
+                        text-align: center;
+                        &__text{
+                            @include heading_1;
+                            color: #3E989A;
+                            text-align: center;
+                        }
+                       
+                    }
+                    &__description{
+                        color: #222222;
+                        @include text_1;
+                        text-align: center;
+                        max-width: 40.813rem;
+                        width: 100%;
+                    }
+                }
+            }
+            .carousel{
+                max-width: 16.5rem;
+                width: 100%;
+                background-color: white;
+                border-radius: .75rem;
+                padding: 1.25rem .75rem;
+                
+                @include mobile{
+                    padding: 1.333rem 3.333rem;
+                    max-width: 26.667rem;
+                    position: absolute;
+                    bottom: -3.75rem;
+                    border: .083rem solid #E5E8E7;
+                }
+                &__info-block{
+                    @include df_fdc_ac;
+                    gap: .75rem;
+                    padding-bottom: .75rem;
+                    svg{
+                        @include mobile{
+                            display: none;
+                        }
+                    }
+                    &__text{
+                        @include text_2;
+                        color: #222222;
+                        text-align: center;
+                    }
+                }
+                .block-pagination{
+                    position: relative;
+                    @include df_ac_jcc;
+                    top: auto;
+                    bottom: auto;
+                    gap: 0.625rem;
+                    .swiper-pagination-bullet {
+                        width: 2.5rem !important;
+                        height: 0.188rem !important;
+                        background-color: #E5E8E7 !important;
+                        border-radius: 0.125rem !important;
+                        position: relative;
+                        overflow: hidden;
+                        opacity: 1;
+                        margin: 0;
+                    }
+                    .swiper-pagination-bullet-active {
+                        background-color: #E5E8E7 !important;
+                    }
+                    
+                    .swiper-pagination-bullet-active::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #3E989A !important;
+                        transform: scaleX(0); 
+                        transform-origin: left;
+                        animation: fillProgress 2.5s linear forwards; 
+                    }
+                    
+                    @keyframes fillProgress {
+                        from {
+                            transform: scaleX(0);
+                        }
+                        to {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+            }
+           
+        }
+        .doctor-block{
+            width: 100%;
+            @include df_jb;
+            align-items: end;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            gap: 9rem;
+            @include mobile{
+                display: none;
+            }
+            &__right-block{
+                display: flex;
+                flex-direction: row-reverse;
+                .right{
+                    &:nth-child(2){
+                        left: 5rem;
+                    }
+                    &:nth-child(3){
+                        left: 9rem;
+                    }
+                    
+                }
+            }
+            &__left-block{
+                display: flex;
+            }
+        }
+        .doctor{
+            position: relative;
+            bottom: 0;
+            left: 0;
+            &:nth-child(3){
+                left: -7rem;
+                img{
+                    max-width: 16.046rem;
+                }
+            }
+            &:nth-child(2){
+                img{
+                    max-width: 15.443rem;
+                }
+                left: -3.5rem;
+            }
+            &:nth-child(1){
+                img{
+                    max-height: 25.188rem;
+                }
+            }
+            &__img{
+                @include image_cover;
+                max-width: 14.841rem;
+            }
+            
+            &__info-block{
+                @include df_fdc_ac;
+                text-wrap: nowrap;
+                position: absolute;
+                bottom: 1.563rem;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: .5rem .75rem;
+                background-color: #FFFFFF33;
+                border: 0.063rem solid #FFFFFF33;
+                border-radius: .25rem;
+                backdrop-filter: blur(0.694rem);
+                z-index: 1;
+                &__name{
+                    @include description;
+                    color: #222222;
+                }
+                &__experience{
+                    @include df_ac;
+                    gap: .25rem;
+                    &__text{
+                        color: #1D2020;
+                        @include description;
+                        opacity: .5;
+                        &:last-child{
+                            color: #222222;
+                            opacity: 1;
+                        }
+                    }
+                    
+                }
+            }
+            .one-block{
+                left: 40%;
+            }
+            .doctor__info-block-right{
+                left: 60%;
+                z-index: 1;
+            }
+        }
+
+    }
+}
+

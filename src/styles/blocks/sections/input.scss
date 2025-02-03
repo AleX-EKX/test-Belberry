@@ -1,0 +1,32 @@
+.form,
+form {
+    @include df_fdc;
+    gap: 1rem;
+    &__field {
+        position: relative;
+        @include df_fdc;
+        gap: .5rem;
+        &__input{
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: #FFFFFF;
+            border: 1px solid #D4D4D4;
+            box-sizing: border-box;
+            font-size: 1.25rem;
+            font-weight: 450;
+            line-height: 130%;
+            letter-spacing: -0.025rem;
+            &::placeholder{
+                @include text_1;
+            }
+        }
+        &__check{
+            @include df_ac;
+            gap: 1rem;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+    outline: none;
+}
+.button {
+    position: relative;
+    width: fit-content;
+    text-wrap: nowrap;
+    cursor: pointer;
+    z-index: 2;
+    &_size {
+        &_basic {
+            padding: 0.719rem 1.5rem 0.844rem 1.5rem;
+            background-color: #3E989A;
+            color: white;
+            border-radius: .5rem;
+            @include text_2;
+            font-family: 'Stolzl', sans-serif;
+            letter-spacing: 0;
+            &:hover{
+                background-color: #49b2b4;
+            }
+        }
+       
+    }
+}
+.send-block{
+    @include df_ac;
+    gap: 1.25rem;
+    @include mobile{
+        flex-direction: column-reverse;
+    }
+    &__text{
+        @include text_2;
+        color: black;
+        max-width: 25rem;
+        width: 100%;
+        opacity: .4;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,64 @@
+.technologies-section{
+    @include mobile{
+        margin-top: 9rem;
+    }
+    &__container{
+        @include df_ac;
+        gap: 1.25rem;
+        @include mobile{
+            flex-direction: column-reverse;
+            gap: 1rem;
+        }
+        &__info-block{
+            @include df_fdc;
+            gap: 1.25rem;
+            padding: 4.063rem 2rem;
+            background-color: #F5F6F6;
+            border: .5rem solid #F5F6F6;
+            border-radius: 1.5rem;
+            max-width: 40.625rem;
+            width: 100%;
+            position: relative;
+            button{
+                z-index: 1;
+                @include mobile{
+                    width: 100%;
+                }
+            }
+            @include mobile{
+                padding: 1.333rem;
+                padding-bottom: 2rem;
+                gap: 1.667rem;
+            }
+            &__title{
+                @include df_fdc;
+                gap: .75rem;
+                z-index: 1;
+                @include mobile{
+                    gap: 1rem;
+                }
+                .title-block{
+                    @include heading_2;
+                    color: #222222;
+                    &__text{
+                        color: #3E989A;
+                    }
+                }
+                .description{
+                    @include text_2;
+                    color: #222222;
+                }
+            }
+            .technologies-fon{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        .technologies-img{
+            max-width: 40.625rem;
+            width: 100%;
+            border-radius: 1.5rem;
+        }
+    }
+}
